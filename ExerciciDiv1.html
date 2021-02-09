@@ -5,35 +5,62 @@
   <title>Title</title>
 </head>
 <body>
-<table>contingut div contenedor 100%</table>
-<table>
-  <tr>
-    <th>div contenedor 50%</th>
-  </tr>
-  <tr>
-    <td>div contenedor secundari 100%</td>
-  </tr>
-  <tr>
-    <td>div contenedor secundari 100%</td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td>primer div contenedor 20% amb float esquerre</td>
-    <td>segon div contenedor 20% amb float esquerre</td>
-    <td>tercer div contenedor 20% amb float esquerre</td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td>primer div contenedor 20% amb float esquerre</td>
-    <td></td>
-    <td>segon div contenedor 20% amb float esquerre</td>
-  </tr>
-</table>
-<table>contingut div contenedor 30%%</table>
-<table>
-  <img>
-</table>
+<style>
+  .header{
+    background-color: #888888;
+    color: white;
+    font-size: 23px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  [class*="col-"]{
+    float: left;
+    padding: 15px;
+    border: 2px solid black;
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 98%;}
+
+</style>
+
+<div class="header col-12">contingut div contenedor 100%</div>
+
+<div class="col-4"> div contenedor 50%
+  <ul>
+    <li class="col-3">div contenedor secundari 100%</li>
+    <li class="col-3">div contenedor secundari 100%</li>
+  </ul>
+</div>
+<div class="col-12">
+  <ul>
+    <li>primer div contenedor 20% amb float esquerre</li>
+    <li>segon div contenedor 20% amb float esquerre</li>
+    <li>tercer contenedor 20% amb float esquerre</li>
+  </ul>
+</div>
+<div class="col-12">
+  <ul>
+    <li>primer div contenedor 20% amb float esquerre</li>
+    <li>tercer contenedor 20% amb float esquerre</li>
+  </ul>
+</div>
+<div class="col-2">contingut dic contenedor centrar 30%%</div>
+<div><img src=""></div>
+
 </body>
 </html>
