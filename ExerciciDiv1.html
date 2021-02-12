@@ -8,17 +8,14 @@
 
 <style>
 
-  html{
-    background-color: cornflowerblue;
-  }
   *{
     box-sizing: border-box;
   }
   .contenedor{
     background-color: #888888;
     color: white;
-    margin: 5px;
-    padding: 15px;
+    margin: 4px;
+    padding: 10px;
     border: 2px solid black;
 
   }
@@ -26,6 +23,15 @@
     clear: both;
     content:"";
     display: table;
+
+  }
+  .contenedor2{
+    background-color: #888888;
+    color: white;
+    margin: 4px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 50%;
   }
   .central{
 
@@ -38,29 +44,50 @@
   }
   .esquerre{
     float: left;
+    margin: 4px;
   }
   .cSecundari1{
-    background-color: #b3d4fc;
+    background-color: aliceblue;
     color: black;
+    border: 2px solid black;
+    width: 100%;
+    padding: 5px;
+    margin-top: 2px;
   }
   .cSecundari2{
     background-color: antiquewhite;
     color: black;
+    border: 2px solid black;
+    width: 20%;
+    padding: 5px;
+
   }
   .contingut{
-    width: 25%;
+    width: 30%;
+  }
+  .contingut2{
+    width: 50%;
+    background-color: antiquewhite;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
   }
 
+  .row::after{
+    clear:both;
+    collapse: "";
+    display: table;
+
+  }
 
   [class*="col-"]{
     margin: 4px;
-    padding: 15px;
     border: 2px solid black;
   }
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
-  .col-4 {width: 32%;}
+  .col-4 {width: 33.33%;}
   .col-5 {width: 41.66%;}
   .col-6 {width: 50%;}
   .col-7 {width: 58.33%;}
@@ -68,27 +95,24 @@
   .col-9 {width: 75%;}
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
-  .col-12 {width: 98%;}
+  .col-12 {width: 100%;}
 
 </style>
 
-<div class="contenedor col-12">contingut div contenedor 100%</div>
+<div class="contenedor">contingut div contenedor 100%</div>
 
-<div class="col-4 contenedor"> div contenedor 50%
-  <div class="col-12 cSecundari1">div contenedor secundari 100%</div>
-  <div class="col-12 cSecundari1">div contenedor secundari 100%</div>
+<div class="contenedor2"> div contenedor 50%
+  <div class="cSecundari1">div contenedor secundari 100%</div>
+  <div class="cSecundari1">div contenedor secundari 100%</div>
 </div>
-<div class="col-12 contenedor">
-  <div class="col-4 esquerre cSecundari2">primer div contenedor 20% amb float esquerre</div>
-  <div class="col-4 esquerre cSecundari2">segon div contenedor 20% amb float esquerre</div>
-  <div class="col-4 esquerre cSecundari2">tercer contenedor 20% amb float esquerre</div>
-
+<div class="contenedor">
+  <div class="esquerre cSecundari2">primer div contenedor 20% amb float esquerre</div>
+  <div class="esquerre cSecundari2">segon div contenedor 20% amb float esquerre</div>
+  <div class="esquerre cSecundari2">tercer div contenedor 20% amb float esquerre</div>
 </div>
-<div class="col-12 contenedor">
-
-  <div class="col-4 esquerre cSecundari2">primer div contenedor 20% amb float esquerre</div>
-  <div class="col-4 dreta cSecundari1">tercer contenedor 20% amb float esquerre</div>
-
+<div class="contenedor">
+  <div class="esquerre cSecundari2">primer div contenedor 20% amb float esquerre</div>
+  <div class="dreta contingut2">tercer contenedor 50% amb float esquerre</div>
 </div>
 <div class="contenedor central contingut">contingut dic contenedor centrar 30%%</div>
 <div class="contenedor dreta"><img src="imatges/rio_portada.jpeg" alt="Rio" width="400" height="300"></div>
